@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=gbk"></meta></head><body><style>html,body,div,p{margin:0;padding:0}
+         body{font-size:14px;font-family:"microsoft yahei";background-color:#ffffff}
+         table{border-collapse:collapse;border-spacing:0;table-layout:fixed}
+         th,td{font-size:12px;padding:0}
+         a{text-decoration:none}
+         img{border:0 none}
+         .chead{width:734px}
+         .chead .logo{width:434px;height:90px}
+         .chead .txt{width:150px;height:90px}
+         .blue{text-decoration:none;color:#3c3d5d}
+         .column{width:734px;line-height:28px;border:1px solid #dedede}
+         .column .hbox{width:125px;height:154px}
+         .column .head{display:block;background-color:#fafafa}
+         .column .box{width:100%;background-color:#ffffff;border-top:2px solid #f2f3f5}
+         .column .box1{width:100%;word-wrap:break-word;color:#ffffff;background-color:#3f4160}
+         .column .box2{width:100%;background-color:#f8f9fa}
+         .column .tba{width:702px;padding:0 15px 15px}
+         .column .tbb{width:702px;padding:0 15px}
+         .column .tb1{width:682px;line-height:28px;color:#333333;word-break:break-all;padding:0 10px}
+         .column .tb2{width:331px;padding:0 10px}
+         .column .tb3{width:682px;padding:15px 10px 15px 0}
+         .column .gray,.column .gray2{color:#999999;word-break:break-all}
+         .column .gray2{color:#666666}
+         .column .plate1,.column .plate2{width:342px;height:54px;font-size:16px;font-weight:bold;color:#818ba3}
+         .column .plate1{width:682px;padding:0 25px}
+         .column .plate1 .f16{font-size:14px;font-weight:normal;color:#333333}
+         .column .plate1 .f12{font-size:12px;font-weight:normal;color:#999999}
+         .column .keys,.column .keys2{width:105px;line-height:28px;color:#666666}
+         .column .keys2{width:100px}
+         .column .txt1,.column .txt2,.column .txt3{width:597px;line-height:28px;color:#333333;word-break:break-all}
+         .column .txt2{width:246px}
+         .column .txt3{font-size:14px;font-weight:bold}
+         .column .txt4{width:240px;color:#ffffff;word-break:break-all}
+         .column .infr{width:587px;color:#ffffff;table-layout:auto}
+         .column .vam,.column .grcha{vertical-align:middle;margin-left:5px}
+         .column .box1 .vam{margin-right:5px;margin-left:0}
+         .column .name{font-size:24px;padding-bottom:18px}
+         .column .icard{color:#a1a3ae;padding-bottom:18px}
+         .column .con{border-top:1px dotted #ddd}
+         .column .pr20{width:165px;padding-right:5px}
+         .column .time{width:120px;line-height:28px;color:#666666;padding-left:10px}
+         .column .rtbox{width:557px;line-height:28px;color:#333333;padding:0 10px 0 5px;word-break:break-all}
+         .column .hai,.column .guan{line-height:18px;font-size:12px;color:#ffffff;vertical-align:text-top;margin-left:5px;padding:1px 3px;background-color:#3cbe7f;border-radius:2px}
+         .column .guan{background-color:#ff9f20}
+         .column .tag{display:inline-block;word-break:break-all;#display:inline;#zoom:1}
+         .column .all{color:#666;padding:10px 10px;background-color:#fafafa}
+         .column .tit{width:682px;height:40px;color:#666666;padding:0 10px;background-color:#f5f5f5}
+         .column .p15{padding:15px 0}
+         .column .p5{display:inline-block;color:#666666;padding:0 5px;#display:inline;#zoom:1}
+         .column .cell .skill{width:120px;font-size:14px;font-weight:bold;text-align:right;padding-right:5px}
+.column .cell .skbg,.column .cell .skco{display:inline-block;width:206px;height:18px;line-height:18px;font-size:12px;color:#ffffff;vertical-align:top;margin-top:6px;background-color:#dddddd;border-radius:20px;#display:inline;#zoom:1}
+         .column .cell .skco{width:196px;font-style:normal;margin-top:0;padding-left:10px;background-color:#ff9f20;z-index:3}
+         .column .sl .skco{width:147px}
+         .column .lh .skco{width:98px}
+         .column .yb .skco{width:49px}
+         .column .fbox strong{font-size:14px;font-weight:bold}
+         .column .cha{font-size:12px;font-weight:normal;color:#2d64b3;margin-left:5px}
+         .column .cha:hover{color:#ff6000}
+         .column .email{width:265px;color:#ffffff}
+
+         .eng td,.eng .txt3,.eng .fbox strong{font-family:"Arial"}
+         .eng .txt1,.eng .rtbox,.eng .phd{width:557px;font-family:"Arial";line-height:28px}
+         .eng .txt2{width:206px}
+         .eng .txt4{width:145px}
+         .eng .cell .txt3{width:120px}
+         .eng .keys{width:110px;text-align:right;padding-right:15px}
+         .eng .pr20 .keys{width:50px}
+         .eng .keys2{width:80px}
+         .eng .phd{padding-left:135px}
+         .eng .time{width:110px;text-align:right;padding-right:10px}
+         .eng .email{width:170px} </style><table cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" class="column"><tbody><tr><td valign="top"><table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box1"><tbody><tr>
+<td class="hbox" align="middle"><img src="./profile.jpg" width="85" height="104" class="head" alt="头像"></td>
+<td><table cellspacing="0" cellpadding="0" border="0" class="infr"><tbody>
+<tr>
+<td colspan="2" class="name">周永发</td>
+<td align="right" class="icard"></td>
+</tr>
+<tr>
+<td valign="top">
+</td>
+<td valign="top">
+<img class="vam" src="http://img01.51jobcdn.com/im/2016/resume/y2.png" width="20" height="20">13100318068</td>
+<td valign="top"><table cellspacing="0" cellpadding="0" border="0" class="email"><tbody><tr>
+<td valign="top" width="25"><img class="vam" src="http://img01.51jobcdn.com/im/2016/resume/y3.png" width="20" height="20">fightzyf1992@hotmail.com</td>
+</tr></tbody></table></td>
+</tr>
+<tr><td valign="top" colspan="3"><p><img class="vam" src="http://img01.51jobcdn.com/im/2016/resume/y4.png" width="20" height="20">男<span class="p5">|</span>25 岁 (1992/03/11)<span class="p5">|</span>2年工作经验
+                    </p></td></tr>
+</tbody></table></td>
+</tr></tbody></table>
+<table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box2"><tbody><tr><td class="tba"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="tb2"><table cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr><td colspan="2" class="plate2">最高学历/学位</td></tr>
+<tr>
+<td valign="top" class="keys">学校：</td>
+<td valign="top" class="txt2">长沙学院（原长沙大学）</td>
+</tr>
+<tr>
+<td valign="top" class="keys">学历/学位：</td>
+<td valign="top" class="txt2">本科/学士</td>
+</tr>
+</tbody>
+</table></td>
+<td valign="top" class="tb2"><table cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr><td colspan="2" class="plate2"></td></tr>
+<tr>
+<td valign="top" class="keys">专业：</td>
+<td valign="top" class="txt2">软件工程</td>
+</tr>
+<tr>
+<td valign="top" class="keys">毕业时间：</td>
+<td valign="top" class="txt2">2014年7月</td>
+</tr>
+</tbody>
+</table></td>
+</tr></tbody></table></td></tr></tbody></table>
+
+
+<table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box"><tbody>
+<tr><td class="plate1">考研成绩</span></td>
+</tr>
+<tr><td class="tba"><table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+<td class="tb2" valign="top"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">思想政治：</td>
+<td valign="top" class="txt2">68</td>
+</tr></tbody></table></td>
+<td class="tb2" valign="top"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">英语一：</td>
+<td valign="top" class="txt2"><span class="tag">57</span></td>
+</tr></tbody></table></td>
+</tr>
+<tr>
+<td class="tb2" valign="top"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">数学一：</td>
+<td valign="top" class="txt2"><span class="tag">95</span></td>
+</tr></tbody></table></td>
+<td class="tb2" valign="top"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">计算机专业基础：</td>
+<td valign="top" class="txt2"><span class="tag">112</span></td>
+</tr></tbody></table></td>
+</tr>
+<tr>
+<td class="tb2" valign="top"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">总分：</td>
+<td valign="top" class="txt2"><span class="tag">332</span></td>
+</tr></tbody></table></td>
+<td class="tb2" valign="top"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys"></td>
+<td valign="top" class="txt2"><span class="tag" style="font-size: 10px;"><a href="./collegegrade.html">查看大学成绩单</a></span></td>
+</tr></tbody></table></td>
+</tr>
+</tbody></table></td></tr>
+</tbody></table>
+
+<table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box"><tbody>
+<tr><td class="plate1">技能特长
+</td></tr>
+<tr><td class="tbb"><table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr><td class="tit">证书</td></tr>
+<tr><td class="tb3"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="time">2012/6</td>
+<td valign="top" class="rtbox"><strong class="txt3">CET4</strong></td>
+</tr></tbody></table></td></tr>
+<tr><td class="tb3 con"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="time">2012/12</td>
+<td valign="top" class="rtbox"><strong class="txt3">日语N2</strong></td>
+</tr></tbody></table></td></tr>
+</tbody></table></td></tr>
+</tbody></table>
+
+<table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box"><tbody>
+<tr><td class="plate1">自我陈述</td></tr>
+<tr><td class="tba"><table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0">
+<thead style="height:0"><tr>
+<td valign="top" class="keys"></td>
+<td valign="top" class="txt1"></td>
+</tr></thead>
+</table></td></tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0">
+<thead style="height:0"><tr>
+<td valign="top" class="keys"></td>
+<td valign="top" class="txt1"></td>
+</tr></thead>
+<tbody><tr>
+<td valign="top" class="keys">自我评价：</td>
+<td valign="top" class="txt1">为人随和，易与他人和谐相处；团队意识、集体荣誉感强；好学上进；能吃苦耐劳，抗压能力强。平时喜欢看书和跑步。<br><br></td>
+</tr>
+<tr>
+<td valign="top" class="keys">读研目的：</td>
+<td valign="top" class="txt1">夯实编程基础，既巩固自身知识理论体系，也提高自己动手实践能力。<br><br></td>
+</tr>
+<tr>
+<td valign="top" class="keys">展望未来：</td>
+<td valign="top" class="txt1">我近期计划学会利用C++、OpenCV做基本的人脸识别。读研期间我希望能做模式识别或者SLAM相关的研究。<br />
+由于读学硕对论文有要求，从较长的阶段来看，英语和数学太差的话，写论文会很痛苦，所以我得继续保持考研时期的学习激情。<br />
+在考研的阶段，我发现花费一点时间运动对提高学习效率很有裨益，我现在每周都至少会跑两次步，我要继续保持这种状态。<br />
+我是个对搞科研、搞学术有情结的人，我小时候曾梦想能够成为一名优秀的学者，现在我觉得我离这个梦想既遥远又亲近。遥远，是因为我深知自己能力还需大大地提高；亲近，是因为我至少有机会做些接近的工作了。能否有能力读博士暂且不论，我想利用读研的机会先做个合格的研究人员。如果不能读博，我会在毕业后进入互联网公司，努力成为一名架构师。</td>
+</tr>
+</tbody>
+</table></td></tr>
+</tbody></table></td></tr>
+</tbody></table>
+
+<table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box"><tbody>
+<tr><td class="plate1">感兴趣研究方向
+</td></tr>
+<tr><td class="tbb"><table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr><td class="tb3"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" style="width:110px;"></td>
+<td valign="top" class="rtbox"><strong class="txt3">机器人系统&nbsp;&nbsp;|&nbsp;&nbsp;模式识别</strong></td>
+</tr></tbody></table></td></tr>
+</tbody></table></td></tr>
+</tbody></table>
+
+<table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box"><tbody>
+<tr><td class="plate1">工作经验</td></tr>
+<tr><td class="tbb"><table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="p15"><table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+<td valign="top" class="time">2016/3-2017/2</td>
+<td valign="top" class="rtbox">
+软件工程师<span class="p5">|</span><span>项目实施部</span>
+</td>
+</tr>
+<tr><td class="phd tb1" colspan="2">
+<span>北京天创征腾信息科技有限公司（长沙）</span><span class="gray">&nbsp;[11个月]
+                    </span>
+</td></tr>
+<tr><td class="phd tb1 gray2" colspan="2">计算机软件<span class="p5">|</span>50-150人<span class="p5">|</span>民营公司</td></tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">工作描述：</td>
+<td valign="top" class="txt1">负责软件项目的开发、测试、实施，以及各个阶段文档的编写。</td>
+</tr></tbody></table></td></tr>
+</tbody></table></td></tr>
+<tr><td class="p15 con"><table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+<td valign="top" class="time">2014/3-2015/4</td>
+<td valign="top" class="rtbox">
+软件工程师<span class="p5">|</span><span>软件开发部</span>
+</td>
+</tr>
+<tr><td class="phd tb1" colspan="2">
+<span>上海求步申亚信息系统有限公司</span><span class="gray">&nbsp;[1年1个月]
+                    </span>
+</td></tr>
+<tr><td class="phd tb1 gray2" colspan="2">计算机软件<span class="p5">|</span>50-150人<span class="p5">|</span>合资</td></tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">工作描述：</td>
+<td valign="top" class="txt1">1.&#x20;负责根据公司需求分析、设计、开发和测试软件产品；&#x20;<br>2.&#x20;负责软件开发过程中所需文档及流程的建立和完善；&#x20;<br>3.&#x20;在一部分工作中还负责与客户沟通，进行需求协商。</td>
+</tr></tbody></table></td></tr>
+</tbody></table></td></tr>
+</table></td></tr>
+</tbody></table>
+<table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box"><tbody>
+<tr><td class="plate1">项目经验</td></tr>
+<tr><td class="tba"><table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="p15"><table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+<td valign="top" class="time">2016/6-2017/2</td>
+<td valign="top" class="rtbox"><strong>江阴农商行验印系统改造</strong></td>
+</tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">所属公司：</td>
+<td valign="top" class="txt1">北京天创征腾信息科技有限公司（长沙）</td>
+</tr></tbody></table></td></tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">项目描述：</td>
+<td valign="top" class="txt1">操作系统：windows&#x20;7、Redhat&#x20;6.4<br>开发环境：JavaSE&#x20;1.5&#x20;+&#x20;Tomcat&#x20;7.0/Websphere&#x20;6.1&#x20;+&#x20;Oracle&#x20;10g<br>开发框架：Struts&#x20;+&#x20;Spring&#x20;+&#x20;Hibernate<br>项目背景：我公司若干年前为江阴农商行搭建了一套验印系统，但是随着时间的迁移，有些功能开始不能适应当前的业务，再加上江阴农商行的柜面系统也在升级，所以我们公司就受江阴农商行的委托，将旧版的验印系统的某些功能进行改造，并配合柜面系统增加一些新功能。</td>
+</tr></tbody></table></td></tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">责任描述：</td>
+<td valign="top" class="txt1">1、项目环境的搭建；<br>2、修改旧项目遗留下来的一些BUG;<br>3、新增了一些功能，如：权限控制，一些数据表的维护，将以前发起验印请求的定长报文改为XML报文；<br>4、测试以及文档的编写。</td>
+</tr></tbody></table></td></tr>
+</tbody></table></td></tr>
+<tr><td class="p15 con"><table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+<td valign="top" class="time">2016/4-2016/6</td>
+<td valign="top" class="rtbox"><strong>桂林银行验印辅助系统</strong></td>
+</tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">所属公司：</td>
+<td valign="top" class="txt1">北京天创征腾信息科技有限公司（长沙）</td>
+</tr></tbody></table></td></tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">项目描述：</td>
+<td valign="top" class="txt1">操作系统：windows&#x20;7、Redhat&#x20;5.8<br>开发环境：JavaSE&#x20;1.6&#x20;+&#x20;Tomcat&#x20;7.0/Websphere&#x20;8.5&#x20;+&#x20;Oracle&#x20;10g<br>开发框架：Struts&#x20;+&#x20;Spring&#x20;+&#x20;Hibernate<br>项目背景：我公司为桂林银行搭建了一套印章识别系统，帮助桂林银行识别各种票据上印章的真伪。但是长期以来，验印的通过率一直维持在65%左右，于是桂林银行提出了将验印通过率提高至85%以上的要求。为了提高验印通过率，我们必须收集足够多的票据样本，用来分析导致验印不过的主要原因是什么，然后调整验印时的参数。基于这种情况下，我们搭建了验印辅助系统。<br>该系统主要有两个功能：一是收集样本；二是对收集的验印票据进行统计与分析。</td>
+</tr></tbody></table></td></tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">责任描述：</td>
+<td valign="top" class="txt1">我的主要职责包括如下几个方面：<br>1、搭建服务器及项目运行环境；<br>2、创建WebService接口进行票据收集；<br>3、实现票据的图像上传和扫描上传；<br>4、测试与文档编写。</td>
+</tr></tbody></table></td></tr>
+</tbody></table></td></tr>
+<tr><td class="p15 con"><table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+<td valign="top" class="time">2015/9-2015/12</td>
+<td valign="top" class="rtbox"><strong>Volvo加速链路监控系统</strong></td>
+</tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">项目描述：</td>
+<td valign="top" class="txt1">操作系统：CentOS&#x20;6.4&#x20;64bit<br>开发环境：PHP&#x20;+&#x20;Apache&#x20;+&#x20;MySQL<br>开发框架：ThinkPHP&#x20;&#x20;3.2<br>项目背景：Volvo汽车委托上海兢祥电信为其公司内部网络进行网络链路优化，以加快Volvo各个4S店访问总部数据的速度，而我公司主要负责对兢祥电信公司之前的网络监控系统进行改版，重新抽取数据。<br>该项目除了基本的管理员信息管理之外，主要实现的功能有：抽取原系统的RRD数据、利用rrdtool重新绘取数据表格。</td>
+</tr></tbody></table></td></tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">责任描述：</td>
+<td valign="top" class="txt1">从需求分析、数据库设计、编码到最后的测试，全程单独负责整个项目。</td>
+</tr></tbody></table></td></tr>
+</tbody></table></td></tr>
+<tr><td class="p15 con"><table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+<td valign="top" class="time">2014/12-2015/4</td>
+<td valign="top" class="rtbox"><strong>NEC关西电力系统</strong></td>
+</tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">项目描述：</td>
+<td valign="top" class="txt1">操作系统：Windows&#x20;7<br>开发环境：JavaSE&#x20;6.0&#x20;+&#x20;Tomcat&#x20;+&#x20;PostgreSQL<br>开发框架：Spring&#x20;+&#x20;SpringMVC&#x20;+&#x20;Mybatis<br>项目背景：该项目是基于日本电力系统改革大背景下衍生的项目，其主要目的是为了进一步促进日本电力销售的私有化。<br>主要有经费计算、电力公司信息管理、电力项目管理等模块。其中，关西电力公司主要是将经费计算系统模块外包给我们公司。经费计算系统模块又分为：经费计算、经费项目、项目单价计算这三个功能。<br>我主要负责项目单价计算功能。<br>项目前台由HTML+CSS+jQuery编写完成，后台基于java面向接口编程方法编写，数据库用PostgreSQL。</td>
+</tr></tbody></table></td></tr>
+<tr><td class="tb1" colspan="2"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td valign="top" class="keys">责任描述：</td>
+<td valign="top" class="txt1">1、负责项目概要设计、详细设计及其他相关文档的编写；<br>2、完成经费计算系统里的经费项目单价计算功能的前台、后台编码；<br>3、编写测试文档并完成测试。</td>
+</tr></tbody></table></td></tr>
+</tbody></table></td></tr>
+</table></td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table></body></html>
