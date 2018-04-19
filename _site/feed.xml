@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>明日又天涯</title>
+    <description>人间如梦，倚笑乘风凉</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 19 Apr 2018 17:02:42 +0800</pubDate>
+    <lastBuildDate>Thu, 19 Apr 2018 17:02:42 +0800</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Markdown入门（第一章）</title>
+        <description>&lt;h2 id=&quot;markdown标题设置&quot;&gt;Markdown标题设置&lt;/h2&gt;
+
+&lt;p&gt;在html中，我们用h1、h2这样的标签来设置标题，实质上就是对某一些文字增加了一些样式。&lt;/p&gt;
+
+&lt;p&gt;Markdown也是一样的，有特定的样式来标明标题。
+Markdown有6个标识标题的等级，分别是：#、##、###、####、#####、######&lt;/p&gt;
+
+&lt;p&gt;效果分别如下：&lt;/p&gt;
+
+&lt;h1 id=&quot;标题一&quot;&gt;标题一&lt;/h1&gt;
+
+&lt;h2 id=&quot;标题二&quot;&gt;标题二&lt;/h2&gt;
+
+&lt;h3 id=&quot;标题三&quot;&gt;标题三&lt;/h3&gt;
+
+&lt;h4 id=&quot;标题四&quot;&gt;标题四&lt;/h4&gt;
+
+&lt;h5 id=&quot;标题五&quot;&gt;标题五&lt;/h5&gt;
+
+&lt;h6 id=&quot;标题六&quot;&gt;标题六&lt;/h6&gt;
+
+&lt;p&gt;此外，还有一种方式，就是加下划线的方式。
+包括两种：
+— 几个连续的减号
+=== 几个连续的等于号&lt;/p&gt;
+
+&lt;p&gt;通过把上述符号加在需要设置为标题的文字下方，以实现标题设置，效果分别如下：&lt;/p&gt;
+
+&lt;h2 id=&quot;标题二-1&quot;&gt;标题二&lt;/h2&gt;
+
+&lt;h1 id=&quot;标题一-1&quot;&gt;标题一&lt;/h1&gt;
+</description>
+        <pubDate>Sun, 03 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/07/03/Markdown%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%B8%80%E7%AB%A0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/03/Markdown%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%B8%80%E7%AB%A0/</guid>
+        
+        <category>Markdown</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markdown入门（序章）</title>
+        <description>&lt;h2 id=&quot;markdown&quot;&gt;Markdown&lt;/h2&gt;
+
+&lt;p&gt;最开始接触Markdown，是为了利用Github Webpages搭建自己的技术博客。&lt;/p&gt;
+
+&lt;p&gt;把个人博客搭在Github Webpages上，既是为了图个方便，省去了自己搭服务器的麻烦，也是为了让自己能够有东西往github上提交，以实现自己一个小小的心愿————github 100连击。^_^!&lt;/p&gt;
+
+&lt;p&gt;在接触后，发现了它一些很强大的特点。&lt;/p&gt;
+
+&lt;p&gt;以下是我引用的一些百度上对Markdown的描述：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，因此有很多人用它写博客。
+世界上最流行的博客平台WordPress和大型CMS如Joomla、Drupal都能很好的支持Markdown。
+Markdown可以用于编写说明文档，并且以“README.MD”的文件名保存在软件的目录下面。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;然而看了这些，可能还是会让人朦胧晕眩，Markdown到底是干什么的呢？它用来解决些什么问题？又该如何使用？这些都是我希望通过这个教程能让大家明白的。&lt;/p&gt;
+
+&lt;p&gt;对于Markdown的应用场景，首先可以举一个例子：
+github的项目描述文件”README.MD”便是用Markdown来写的，它让我们在描述我们项目的时候，可以增加更多类型的文档元素，如控制文章标题段落样式、引用图片、导入超级链接等。使我们的描述更加生动。有点儿类似用html写一个静态网页。&lt;/p&gt;
+
+&lt;p&gt;废话不多说，实践最重要。&lt;/p&gt;
+
+&lt;p&gt;最后附上Markdown的文档站&lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;前往链接&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/07/02/Markdown%E5%85%A5%E9%97%A8-%E5%BA%8F%E7%AB%A0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/02/Markdown%E5%85%A5%E9%97%A8-%E5%BA%8F%E7%AB%A0/</guid>
+        
+        <category>Markdown</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
