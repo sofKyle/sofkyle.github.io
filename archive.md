@@ -2,7 +2,7 @@
 layout: page
 title: "Archive"
 description: "人间如梦，倚笑乘风凉"
-header-img: "img/semantic.jpg"
+header-img: "img/zhihu.jpg"
 
 ---
 
