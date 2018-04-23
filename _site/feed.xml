@@ -5,8 +5,8 @@
     <description>人间如梦，倚笑乘风凉</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 22 Apr 2018 23:56:09 +0800</pubDate>
-    <lastBuildDate>Sun, 22 Apr 2018 23:56:09 +0800</lastBuildDate>
+    <pubDate>Mon, 23 Apr 2018 22:56:05 +0800</pubDate>
+    <lastBuildDate>Mon, 23 Apr 2018 22:56:05 +0800</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
@@ -162,6 +162,109 @@ CAS只是保障了共享变量更新这个操作的原子性，它并不保障�
       </item>
     
       <item>
+        <title>Markdown入门（第四章）</title>
+        <description>&lt;h2 id=&quot;markdown列表&quot;&gt;Markdown列表&lt;/h2&gt;
+
+&lt;p&gt;*、+、-均可用来实现无序列表，&lt;/p&gt;
+
+&lt;p&gt;* 苹果&lt;/p&gt;
+
+&lt;p&gt;+ 香蕉&lt;/p&gt;
+
+&lt;p&gt;- 梨子&lt;/p&gt;
+
+&lt;p&gt;其显示效果为：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;苹果&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;香蕉&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;梨子&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;有序列表的实现也比较简单，只需要行号加上小数点.就可以了：&lt;/p&gt;
+
+&lt;p&gt;1. 苹果&lt;/p&gt;
+
+&lt;p&gt;2. 香蕉&lt;/p&gt;
+
+&lt;p&gt;3. 梨子&lt;/p&gt;
+
+&lt;p&gt;其显示效果为：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;苹果&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;香蕉&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;梨子&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 05 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/07/05/Markdown%E5%85%A5%E9%97%A8-%E7%AC%AC%E5%9B%9B%E7%AB%A0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/05/Markdown%E5%85%A5%E9%97%A8-%E7%AC%AC%E5%9B%9B%E7%AB%A0/</guid>
+        
+        <category>Markdown</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markdown入门（第三章）</title>
+        <description>&lt;h2 id=&quot;markdown强调短语&quot;&gt;Markdown强调短语&lt;/h2&gt;
+
+&lt;p&gt;一般说来，我们有两种方式用来强调短语，&lt;/p&gt;
+
+&lt;p&gt;一种是把需要被强调的短语设置为斜体，另一种则是把短语设置为粗体。&lt;/p&gt;
+
+&lt;p&gt;在Markdown中，可以用_或*将需要强调的短语围起来以实现斜体字效果，&lt;/p&gt;
+
+&lt;p&gt;例如：&lt;/p&gt;
+
+&lt;p&gt;_实践是检验真理的唯一标准。_&lt;/p&gt;
+
+&lt;p&gt;*雄关漫道真如铁，而今迈步从头越。*&lt;/p&gt;
+
+&lt;p&gt;其显示效果为：&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;实践是检验真理的唯一标准。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;雄关漫道真如铁，而今迈步从头越。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;可以用__或**来实现粗体字效果，&lt;/p&gt;
+
+&lt;p&gt;例如：&lt;/p&gt;
+
+&lt;p&gt;__实践是检验真理的唯一标准。__&lt;/p&gt;
+
+&lt;p&gt;**雄关漫道真如铁，而今迈步从头越。**&lt;/p&gt;
+
+&lt;p&gt;显示效果为：&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;实践是检验真理的唯一标准。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;雄关漫道真如铁，而今迈步从头越。&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 04 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/07/04/Markdown%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%B8%89%E7%AB%A0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/04/Markdown%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%B8%89%E7%AB%A0/</guid>
+        
+        <category>Markdown</category>
+        
+        
+      </item>
+    
+      <item>
         <title>Markdown入门（第二章）</title>
         <description>&lt;h2 id=&quot;markdown内容引用&quot;&gt;Markdown内容引用&lt;/h2&gt;
 
@@ -194,8 +297,9 @@ CAS只是保障了共享变量更新这个操作的原子性，它并不保障�
 
 &lt;p&gt;在html中，我们用h1、h2这样的标签来设置标题，实质上就是对某一些文字增加了一些样式。&lt;/p&gt;
 
-&lt;p&gt;Markdown也是一样的，有特定的样式来标明标题。
-Markdown有6个标识标题的等级，分别是：#、##、###、####、#####、######&lt;/p&gt;
+&lt;p&gt;Markdown也是一样的，有特定的样式来标明标题。&lt;/p&gt;
+
+&lt;p&gt;Markdown有6个标识标题的等级，分别是：#、##、###、####、#####、######&lt;/p&gt;
 
 &lt;p&gt;效果分别如下：&lt;/p&gt;
 
@@ -211,10 +315,13 @@ Markdown有6个标识标题的等级，分别是：#、##、###、####、#####�
 
 &lt;h6 id=&quot;标题六&quot;&gt;标题六&lt;/h6&gt;
 
-&lt;p&gt;此外，还有一种方式，就是加下划线的方式。
-包括两种：
-— 几个连续的减号
-=== 几个连续的等于号&lt;/p&gt;
+&lt;p&gt;此外，还有一种方式，就是加下划线的方式。&lt;/p&gt;
+
+&lt;p&gt;包括两种：&lt;/p&gt;
+
+&lt;p&gt;— 几个连续的减号&lt;/p&gt;
+
+&lt;p&gt;=== 几个连续的等于号&lt;/p&gt;
 
 &lt;p&gt;通过把上述符号加在需要设置为标题的文字下方，以实现标题设置，效果分别如下：&lt;/p&gt;
 
