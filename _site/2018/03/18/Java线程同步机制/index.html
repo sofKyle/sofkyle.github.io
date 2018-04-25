@@ -110,14 +110,16 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <h1 id="java线程同步机制">Java线程同步机制</h1>
-<h3 id="java锁分类">Java锁分类</h3>
-<p><strong>内部锁（Intrinsic Lock）</strong>：通过synchronized关键字实现。
-<strong>显式锁（Explicit Lock）</strong>：通过java.concurrent.locks.Lock接口的实现类实现，如：java.concurrent.locks.ReentrantLock。</p>
+                <h3 id="java锁分类">Java锁分类</h3>
+<p><strong>内部锁（Intrinsic Lock）</strong>：通过synchronized关键字实现。</p>
+
+<p><strong>显式锁（Explicit Lock）</strong>：通过java.concurrent.locks.Lock接口的实现类实现，如：java.concurrent.locks.ReentrantLock。</p>
 
 <h3 id="可重入性">可重入性</h3>
-<p>一个线程在其持有一个锁的时候能否再次（或者多次）申请<strong>该</strong>锁。
-如果一个线程持有一个锁的时候还能够继续成功申请该锁，则称该锁是可重入的，否则称为非可重入的。</p>
+<p>一个线程在其持有一个锁的时候能否再次（或者多次）申请<strong>该</strong>锁。</p>
+
+<p>如果一个线程持有一个锁的时候还能够继续成功申请该锁，则称该锁是可重入的，否则称为非可重入的。</p>
+
 <blockquote>
   <p><strong>TIPS：</strong>可重入锁可以被理解为一个对象，该对象包含一个计数器属性，表示相应的锁还没有被任何线程持有。每次线程获得一个可重入锁的时候，该锁的计数器值会被增加1。每次一个线程释放锁的时候，该锁的计数器属性值就会被减1。一个线程初次获得可重入锁时相应的开销相对大，因为必须与其他线程“竞争”以获得锁。</p>
 </blockquote>
@@ -130,10 +132,12 @@
 	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>锁句柄是一个对象的引用，可以填写为<strong>this</strong>关键字，即表示以当前对象为锁句柄。锁句柄对应的监视器就被称为相应同步块的<strong>引导锁</strong>。线程在执行临界区代码的时候必须持有该临界区的引导锁。</p>
 
 <h4 id="内部锁的调度">内部锁的调度</h4>
 <p>Java虚拟机会为每个内部锁分配一个<strong>入口集（Entry Set）</strong>，用来记录等待获得相应内部锁的线程。只有一个申请者能够成为该锁的持有线程，其他申请失败者会进入<strong>BLOCKED</strong>状态并被存入相应锁的入口集中等待。</p>
+
 <blockquote>
   <p><strong>TIPS：</strong>申请的锁被其持有线程释放的时候，该锁的入口集中的<strong>任意一个线程</strong>会被Java虚拟机唤醒。Java虚拟机对内部锁的调度仅支持<strong>非公平调度</strong>，被唤醒的等待线程即将要占用处理器运行时可能还有其他新的活跃线程与该线程抢占这个被释放锁，因此被唤醒的线程不一定就能成为该锁的持有线程。</p>
 </blockquote>
@@ -167,6 +171,7 @@ ReentrantReadWriteLock所实现的读写锁是个可重入锁，并且支持<str
 
 <h3 id="内存屏障">内存屏障</h3>
 <p>内存屏障是对一类仅针对内存读、写操作指令的跨处理器架构的比较底层的抽象。内存屏障是被插入到两个指令之间进行使用的，其作用是禁止编译器、处理器重排序从而保障有序性。它在指令序列中就像一堵墙，使其两侧的指令无法“穿越”它。</p>
+
 <blockquote>
   <font color="red" face="黑体">疑问点：</font>
   <font color="red">分类：
@@ -177,66 +182,88 @@ ReentrantReadWriteLock所实现的读写锁是个可重入锁，并且支持<str
 
 <h3 id="锁与重排序">锁与重排序</h3>
 <p>与锁有关的重排序规则可以理解为指令相对于临界区的“许进不许出”。</p>
+
 <h4 id="重排序规则">重排序规则</h4>
-<p><strong>假定只有一个临界区时：</strong>
-一、临界区内的操作不允许被重排序到临界区之外；
-二、临界区内的操作之间允许被重排序；
-三、临界区外的操作之间可以被重排序；
-<strong>扩展到多个临界区：</strong>
-四、锁申请与锁释放操作不能被重排序；
-五、两个锁申请操作不能被重排序；
-六、两个锁释放操作不能被重排序。
-七、临界区外的操作可以被重排到临界区之内。</p>
+<p><strong>假定只有一个临界区时：</strong></p>
+
+<p>一、临界区内的操作不允许被重排序到临界区之外；</p>
+
+<p>二、临界区内的操作之间允许被重排序；</p>
+
+<p>三、临界区外的操作之间可以被重排序；</p>
+
+<p><strong>扩展到多个临界区：</strong></p>
+
+<p>四、锁申请与锁释放操作不能被重排序；</p>
+
+<p>五、两个锁申请操作不能被重排序；</p>
+
+<p>六、两个锁释放操作不能被重排序。</p>
+
+<p>七、临界区外的操作可以被重排到临界区之内。</p>
 
 <h3 id="轻量级同步机制volatile关键字">轻量级同步机制：volatile关键字</h3>
 <p><strong>volatile变量不会被编译器分配到寄存器进行存储，对volatile变量的读写操作都是内存访问操作。</strong></p>
+
 <h4 id="volatile原子性">Volatile原子性</h4>
 <p>在原子性方面它仅能保障对所修饰变量的读写原子性，volatile关键字的使用不会引起上下文切换。</p>
+
 <blockquote>
   <p><strong>TIPS：</strong>在Java语言中，对long型和double型以外的任何类型的写操作都是原子操作，通过使用volatile关键字可以保障long/double型变量写操作的原子性。</p>
   <h4 id="volatile有序性">Volatile有序性</h4>
-  <p>禁止了如下重排序：</p>
-  <ul>
-    <li>写volatile变量操作与该操作之前的任何读、写操作不会被重排序；</li>
-    <li>读volatile变量操作与该操作之后的任何读、写操作不会被重排序。</li>
-  </ul>
 </blockquote>
 
-<h3 id="cas与原子变量">CAS与原子变量</h3>
-<p><strong>CAS(Compare and Swap)</strong>是对一种处理器指令的称呼。
-CAS只是保障了共享变量更新这个操作的原子性，它并不保障可见性。</p>
+<p>禁止了如下重排序：</p>
 
-<h4 id="原子操作工具原子变量类">原子操作工具：原子变量类</h4>
-<p>原子变量类（Atomics）是基于CAS实现的能够保障对共享变量进行read-modify-write更新操作的原子性和可见性的一组工具类。
-分组 | <center>类</center></p>
 <ul>
   <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>基础数据类型</td>
-          <td>AtomicInteger、AtomiceLong、AtomicBoolean</td>
-        </tr>
-        <tr>
-          <td>数组型</td>
-          <td>AtomicIntegerArray、AtomictLongArray、AtomicReferenceArray</td>
-        </tr>
-        <tr>
-          <td>字段更新器</td>
-          <td>AtomicIntegerFieldUpdater、AtomicLongFieldUpdater、AtomicReferenceFieldUpdater</td>
-        </tr>
-        <tr>
-          <td>引用型</td>
-          <td>AtomicReference、AtomicStampedReference、AtomicMarkableReference</td>
-        </tr>
-      </tbody>
-    </table>
+    <p>写volatile变量操作与该操作之前的任何读、写操作不会被重排序；</p>
+  </li>
+  <li>
+    <p>读volatile变量操作与该操作之后的任何读、写操作不会被重排序。</p>
   </li>
 </ul>
 
+<h3 id="cas与原子变量">CAS与原子变量</h3>
+<p><strong>CAS(Compare and Swap)</strong>是对一种处理器指令的称呼。</p>
+
+<p>CAS只是保障了共享变量更新这个操作的原子性，它并不保障可见性。</p>
+
+<h4 id="原子操作工具原子变量类">原子操作工具：原子变量类</h4>
+
+<p>原子变量类（Atomics）是基于CAS实现的能够保障对共享变量进行read-modify-write更新操作的原子性和可见性的一组工具类。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>分组</th>
+      <th style="text-align: left">类</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>基础数据类型</td>
+      <td style="text-align: left">AtomicInteger、AtomiceLong、AtomicBoolean</td>
+    </tr>
+    <tr>
+      <td>数组型</td>
+      <td style="text-align: left">AtomicIntegerArray、AtomictLongArray、AtomicReferenceArray</td>
+    </tr>
+    <tr>
+      <td>字段更新器</td>
+      <td style="text-align: left">AtomicIntegerFieldUpdater、AtomicLongFieldUpdater、AtomicReferenceFieldUpdater</td>
+    </tr>
+    <tr>
+      <td>引用型</td>
+      <td style="text-align: left">AtomicReference、AtomicStampedReference、AtomicMarkableReference</td>
+    </tr>
+  </tbody>
+</table>
+
 <h4 id="aba问题">ABA问题</h4>
-<p>对于共享变量V，当前线程看到它的值为A的那一刻，其他线程已经将其值更新为B，接着在当前线程执行CAS的时候该变量的值又被其他线程更新为A，那么此时我们是否认为V的值没有被其他线程更新过呢？或者说这种结果是否可以接受呢？
-规避ABA问题的方案：为变量的更新引入版本号。</p>
+<p>对于共享变量V，当前线程看到它的值为A的那一刻，其他线程已经将其值更新为B，接着在当前线程执行CAS的时候该变量的值又被其他线程更新为A，那么此时我们是否认为V的值没有被其他线程更新过呢？或者说这种结果是否可以接受呢？</p>
+
+<p>规避ABA问题的方案：为变量的更新引入版本号。</p>
 
 <h3 id="对象的发布">对象的发布</h3>
 <p><strong>对象发布</strong>是指使对象能够被其作用域之外的线程访问。</p>
@@ -248,8 +275,9 @@ CAS只是保障了共享变量更新这个操作的原子性，它并不保障�
 </ul>
 
 <h3 id="安全发布与逸出">安全发布与逸出</h3>
-<p><strong>安全发布</strong>就是指对象以一种线程安全的方式被发布。
-<strong>逸出</strong>是指一个对象的发布出现我们不期望的结果或者对象发布本身不是我们所期望的时候。</p>
+<p><strong>安全发布</strong>就是指对象以一种线程安全的方式被发布。</p>
+
+<p><strong>逸出</strong>是指一个对象的发布出现我们不期望的结果或者对象发布本身不是我们所期望的时候。</p>
 
 
                 <hr>
