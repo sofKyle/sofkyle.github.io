@@ -5,8 +5,8 @@
     <description>人间如梦，倚笑乘风凉</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 23 Apr 2018 22:56:05 +0800</pubDate>
-    <lastBuildDate>Mon, 23 Apr 2018 22:56:05 +0800</lastBuildDate>
+    <pubDate>Wed, 25 Apr 2018 09:49:31 +0800</pubDate>
+    <lastBuildDate>Wed, 25 Apr 2018 09:49:31 +0800</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
@@ -157,6 +157,50 @@ CAS只是保障了共享变量更新这个操作的原子性，它并不保障�
         <guid isPermaLink="true">http://localhost:4000/2018/03/18/Java%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6/</guid>
         
         <category>Java多线程</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markdown入门（第五章）</title>
+        <description>&lt;h2 id=&quot;markdown链接&quot;&gt;Markdown链接&lt;/h2&gt;
+
+&lt;p&gt;Markdown支持两种方式实现链接：内联、引用&lt;/p&gt;
+
+&lt;p&gt;首先说说内联，它的格式是这样的：&lt;/p&gt;
+
+&lt;p&gt;[百度](http://www.baidu.com/)&lt;/p&gt;
+
+&lt;p&gt;首先用中括号[]标示链接显示的文字，然后用小括号()描述实际的链接地址，其效果为：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.baidu.com/&quot;&gt;百度&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;此外，引用方式，其实就是将链接统一管理起来，然后通过引用的方式，在需要引入链接的地方引入链接就可以了。&lt;/p&gt;
+
+&lt;p&gt;比如，现在管理百度、淘宝、当当三个网站首页的链接，首先需要列出链接清单，这个清单在Markdown的文本中实际是不会显示出来的：&lt;/p&gt;
+
+&lt;p&gt;[1]: http://www.baidu.com/        “百度”&lt;/p&gt;
+
+&lt;p&gt;[2]: http://www.taobao.com/       “淘宝”&lt;/p&gt;
+
+&lt;p&gt;[3]: http://www.dangdang.com/     “当当”&lt;/p&gt;
+
+&lt;p&gt;其中中括号括起来的地方称为链接编号，双引号扩起来的地方称为链接名。&lt;/p&gt;
+
+&lt;p&gt;然后现在要用到三个链接，我们可以采用：[链接名][链接编号]这样的格式来引入链接，其效果为：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.baidu.com/&quot; title=&quot;BaiDu&quot;&gt;百度&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.taobao.com/&quot; title=&quot;TaoBao&quot;&gt;淘宝&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.dangdang.com/&quot; title=&quot;DangDang&quot;&gt;当当&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 06 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/07/06/Markdown%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%BA%94%E7%AB%A0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/06/Markdown%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%BA%94%E7%AB%A0/</guid>
+        
+        <category>Markdown</category>
         
         
       </item>
