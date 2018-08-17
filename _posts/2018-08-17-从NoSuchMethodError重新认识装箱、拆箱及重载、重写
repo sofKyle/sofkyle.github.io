@@ -1,0 +1,8 @@
+---
+layout: post
+title: 从NoSuchMethodError重新认识装箱、拆箱及重载、重写
+tags: [JVM, ]
+
+---
+
+在开发中遇到了这样一个问题：在A工程中引入了B工程中的一个方法，B工程中的这个方法入参是int，而A工程中
