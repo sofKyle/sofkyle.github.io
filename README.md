@@ -2,11 +2,8 @@
 
 此博客 fork 自 Azeril，感谢。
 
-##sofgc
+##sofkyle
 
-原名：周永发
-博客：[sofgc](sofgc.tech)
+博客：[sofkyle](sofkyle.cn)
 
 抽风了才记得要写东西。
-
-
