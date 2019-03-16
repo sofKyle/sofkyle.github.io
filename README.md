@@ -1,8 +1,8 @@
-##Fork说明
+## Fork说明
 
 此博客 fork 自 Azeril，感谢。
 
-##sofkyle
+## SofKyle
 
 博客：[sofkyle](sofkyle.cn)
 
