@@ -41,7 +41,7 @@ timezone: Asia/Shanghai
 defaults:
   -
     scope: 
-      path: ""
+      path: "_posts"
       type: "posts"
     values:
       layout: "post"
