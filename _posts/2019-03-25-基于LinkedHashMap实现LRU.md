@@ -14,7 +14,7 @@ tags: [JAVA核心, ]
 
 具体实现的时候，我们不需要记录其访问时间，可以通过队列来标识访问顺序，比如将最近访问的节点插入队头，那么每次淘汰的时候都是选择淘汰队尾节点。  
 
-**LinkedHashMap**是Java核心内库里实现的跳跃表，继承自HashMap，并实现了Map接口。它与HashMap在结构上主要有两点区别：
+**LinkedHashMap**是Java核心内库里实现的一种有序哈希表，继承自HashMap，并实现了Map接口。它与HashMap在结构上主要有两点区别：
 + LinkedHashMap多了两个Entry节点：before、after，以实现链表的双向遍历  
 + 引入了对节点顺序的控制，新增了一个**accessOrder**布尔属性：当它为false时，和HashMap一样，新插入的节点在发生哈希冲突时通过拉链法存在链尾；当它为true时，每次访问（get\put）某个节点时，都会将这个节点重新放置于链尾。  
 
@@ -81,7 +81,7 @@ ListNode是我构造的链表节点，我采取的是维护一个访问队列的
         }
     }
 ```
-这样一来，我实现方法中的数据结构不也变成了一个跳跃表么！！！  
+这样一来，我实现方法中的数据结构不也变成了一个LinkedHashMap么！！！  
 
 接下来，我研究了下LinkedHashMap的实现。  
 
@@ -151,7 +151,7 @@ initialCapacity初始容量，和HashMap一致，初始容量是16；loadFactor�
 在可以看到大佬的代码里面重写了removeEldestEntry()方法。当当前数据节点数目大于cache容量的时候，便会移除跳跃表中的首节点。根据LinkedHashMap最新访问节点置于链表尾部的规则，链首节点刚好是LRU算法规则中需要被淘汰的节点。
 
 **总结：**  
-跳跃表本身的特质，让它可以作为LRU算法绝佳的实践。
+LinkedHashMap本身的特质，让它可以作为LRU算法绝佳的实践。
 
 > **TIPS：HashMap的扩容规则**  
 > 容量：存储值的节点数组大小  
