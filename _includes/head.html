@@ -37,8 +37,10 @@
         MathJax.Hub.Config({
             tex2jax: {
                 skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-                HTML-CSS: { color: #000; background-color: #eee}
-            }
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            HTML-CSS: { color: #000; background-color: #eee}
         });
     </script>      
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
