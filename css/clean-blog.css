@@ -524,3 +524,8 @@ body {
   background-color: #ddd;
 }
 
+/* LaTax Style */
+.highlighter-rouge {
+  color: #000;
+  background-color: #eee
+}
