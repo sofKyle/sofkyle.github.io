@@ -1,5 +1,4 @@
 ---
-permalink: /tags/
 layout: page
 title: "Tags"
 description: "人间如梦，倚笑乘风凉"  

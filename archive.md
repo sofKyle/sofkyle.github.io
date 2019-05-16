@@ -1,5 +1,4 @@
 ---
-permalink: /archive/
 layout: page
 title: "Archive"
 description: "人间如梦，倚笑乘风凉"
