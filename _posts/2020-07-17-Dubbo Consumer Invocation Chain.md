@@ -5,6 +5,7 @@ tags: [Dubbo, ]
 
 ---
 
+```
 ReferenceAnnotationBeanPostProcessor#invoke
     |
     |
@@ -60,3 +61,4 @@ DubboInvoker#doInvoke
     |----> new AsyncRpcResult(inv) ----> ExchangeClient#request ----> ReferenceCountExchangeClient#request ----> HeaderExchangeClient#request ----> HeaderExchangeChannel#request ----> AbstractPeer#send ----> AbstractClient#send ----> AbstractClient#getChannel
     V
 NettyChannel#send: 通过Netty传送RpcInvocation对象
+```
