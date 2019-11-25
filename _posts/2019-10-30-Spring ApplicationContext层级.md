@@ -80,10 +80,10 @@ ProxyCreatorSupport#createAopProxy
 DefaultAopProxyFactory#createAopProxy
 ```
 
-到了DefaultAopProxyFactory#createAopProxy这，会做一个抉择，决定具体使用JdkDynamicAopProxy构造代理还是使用CglibProxyFactory构造代理。  
+到了DefaultAopProxyFactory#createAopProxy这，会做一个抉择，决定具体使用JdkDynamicAopProxy构造代理还是使用Cglib2AopProxy构造代理。  
 抉择的规则如下：  
 > 1、在没有设置optimize = true，proxyTargetClass = true，且没有提供SpringProxy之外的其他代理时，会直接使用JdkDynamicAopProxy；  
 > 2、当前代理的目标为接口时，使用JdkDynamicAopProxy；  
-> 3、当前代理的目标非接口时，使用CglibProxyFactory。  
+> 3、当前代理的目标非接口时，使用Cglib2AopProxy。  
 
 至此，决定好代理方式之后，就会调用具体代理类的getProxy方法，来为Bean生成代理。这样，当调用目标对象时，就会通过层层构造的代理对象，逐个调用通知方法。
