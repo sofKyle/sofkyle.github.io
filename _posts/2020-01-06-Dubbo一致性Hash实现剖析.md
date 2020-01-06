@@ -87,7 +87,7 @@ dubbo:service、dubbo:reference、dubbo:provider、dubbo:consumer、dubbo:method
 
 **Properties配置：**
 
->dubbo.reference.loadbalance=consistenthash
+> dubbo.reference.loadbalance=consistenthash
 
 
 
