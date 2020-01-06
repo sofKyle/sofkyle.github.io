@@ -17,7 +17,7 @@ tags: [Dubbo, ]
 
 将服务地址（ip+端口）按照一定规则构造出特定的识别码（如md5码），再用识别码对`$2^{32}$`取模，确定服务在Hash值区间对应的位置。假设有Node1、Node2、Node3三个服务，其映射关系如下：
 
-![Consistent Hash Init Model]({{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;Init&#32;Model.jpg)
+<img src="{{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;Init&#32;Model.jpg" width="300" />
 
 
 
@@ -25,7 +25,7 @@ tags: [Dubbo, ]
 
 在发起请求时，我们往往会带上参数，而这些参数，就可以被我们用来确定具体调用哪一个服务。假设有请求R1、R2、R3，对它们的参数也经过计算特定识别码、取余的一系列运算之后，有如下映射关系：
 
-![Consistent Hash Request Model]({{site.url}}/assets/image/consisitenthash/../../../../../assets/image/consisitenthash/Consistent&#32;Hash&#32;Request&#32;Model.jpg)
+<img src="{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;Request&#32;Model.jpg" width="300" />
 
 从图中，我们可以看到，R1请求映射在0-Node1中间，R2请求映射在Node1-Node2中间，R3请求映射在Node2-Node3中间。我们取**服务Hash值大于请求Hash值**的**第一个服务**作为实际的调用服务。也就是说，R1请求将调用Node1服务，R2请求将调用Node2服务，R3请求将调用Node3服务。
 
@@ -35,7 +35,7 @@ tags: [Dubbo, ]
 
 假设新增服务Node4，映射在Node3之前，恰巧破坏了原来的一个映射关系：
 
-![Consistent Hash New Node Model]({{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;New&#32;Node&#32;Model.jpg)
+<img src="{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;New&#32;Node&#32;Model.jpg" width="300" />
 
 这样，请求R3将会实际调用服务Node4，但请求R1、R2不受影响。
 
@@ -45,7 +45,7 @@ tags: [Dubbo, ]
 
 假设服务Node2宕机，那么R2请求将会映射到Node3：
 
-![Consistent Hash Delete Node Model]({{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;Delete&#32;Node&#32;Model.jpg)
+<img src="{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;Delete&#32;Node&#32;Model.jpg" width="300" />
 
 原本的R1、R3请求不受影响。
 
@@ -59,13 +59,13 @@ tags: [Dubbo, ]
 
 在我们上面的假设中，我们假设Node1、Node2、Node3三个服务在经过Hash映射后所分布的位置恰巧把环切成了均等的三分，请求的分布也基本是平衡的。但是实际上计算服务Hash值的时候，是很难这么巧的。也许一不小心就映射成了这个样子：
 
-![Consistent Hash Balance Model]({{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;Balance&#32;Model.jpg)
+<img src="{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;Balance&#32;Model.jpg" width="300" />
 
 这样，就会导致大部分请求都会被映射到Node1上。因此，引出了虚拟节点。  
 
 所谓虚拟节点，就是除了对服务本身地址进行Hash映射外，还通过在它地址上做些处理（比如Dubbo中，在ip+port的字符串后加上计数符1、2、3......，分别代表虚拟节点1、2、3），以达到同一服务映射多个节点的目的。通过引入虚拟节点，我们可以把上图中映射给Node1的请求进一步拆分：
 
-![Consistent Hash Virtual Node Model]({{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;Virtual&#32;Node&#32;Model.jpg)
+<img src="{site.url}}/assets/image/consisitenthash/Consistent&#32;Hash&#32;Virtual&#32;Node&#32;Model.jpg" width="300" />
 
 如上图所示，若有请求落在Node3-Node1'区间，该请求应该是调用Node1'服务，但是因为Node1'是Node1的虚拟节点，所以实际调用的是Node1服务。通过引入虚拟节点，请求的分布就会比较平衡了。
 
