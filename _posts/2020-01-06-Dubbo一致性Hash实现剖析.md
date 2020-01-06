@@ -11,13 +11,13 @@ tags: [Dubbo, ]
 
 ### 一、环形队列Hash映射模型
 
-这种方案，其基础还是基于取模运算。对2^32取模，那么，Hash值的区间为[0, 2^32 - 1]。接下来要做的，就包括两部分：  
+这种方案，其基础还是基于取模运算。对`$2^32$`取模，那么，Hash值的区间为[0, `$2^32-1$`]。接下来要做的，就包括两部分：  
 
 #### **a、映射服务**
 
-将服务地址（ip+端口）按照一定规则构造出特定的识别码（如md5码），再用识别码对2^32取模，确定服务在Hash值区间对应的位置。假设有Node1、Node2、Node3三个服务，其映射关系如下：
+将服务地址（ip+端口）按照一定规则构造出特定的识别码（如md5码），再用识别码对`$2^32$`取模，确定服务在Hash值区间对应的位置。假设有Node1、Node2、Node3三个服务，其映射关系如下：
 
-![Consistent Hash Init Model](C:\Users\glorychou\Desktop\Dubbo Consistent Hash\Consistent Hash Init Model.jpg)
+![Consistent Hash Init Model](/_posts/image/consisitenthash/Consistent&#32;Hash&#32;Init&#32;Model.jpg)
 
 
 
@@ -35,7 +35,7 @@ tags: [Dubbo, ]
 
 假设新增服务Node4，映射在Node3之前，恰巧破坏了原来的一个映射关系：
 
-![Consistent Hash New Node Model](C:\Users\glorychou\Desktop\Dubbo Consistent Hash\Consistent Hash New Node Model.jpg)
+![Consistent Hash New Node Model](/_posts/image/consisitenthash/Consistent&#32;Hash&#32;New&#32;Node&#32;Model.jpg)
 
 这样，请求R3将会实际调用服务Node4，但请求R1、R2不受影响。
 
@@ -45,7 +45,7 @@ tags: [Dubbo, ]
 
 假设服务Node2宕机，那么R2请求将会映射到Node3：
 
-![Consistent Hash Delete Node Model](C:\Users\glorychou\Desktop\Dubbo Consistent Hash\Consistent Hash Delete Node Model.jpg)
+![Consistent Hash Delete Node Model](/_posts/image/consisitenthash/Consistent&#32;Hash&#32;Delete&#32;Node&#32;Model.jpg)
 
 原本的R1、R3请求不受影响。
 
@@ -59,13 +59,13 @@ tags: [Dubbo, ]
 
 在我们上面的假设中，我们假设Node1、Node2、Node3三个服务在经过Hash映射后所分布的位置恰巧把环切成了均等的三分，请求的分布也基本是平衡的。但是实际上计算服务Hash值的时候，是很难这么巧的。也许一不小心就映射成了这个样子：
 
-![Consistent Hash Balance Model](C:\Users\glorychou\Desktop\Dubbo Consistent Hash\Consistent Hash Balance Model.jpg)
+![Consistent Hash Balance Model](/_posts/image/consisitenthash/Consistent&#32;Hash&#32;Balance&#32;Model.jpg)
 
 这样，就会导致大部分请求都会被映射到Node1上。因此，引出了虚拟节点。  
 
 所谓虚拟节点，就是除了对服务本身地址进行Hash映射外，还通过在它地址上做些处理（比如Dubbo中，在ip+port的字符串后加上计数符1、2、3......，分别代表虚拟节点1、2、3），以达到同一服务映射多个节点的目的。通过引入虚拟节点，我们可以把上图中映射给Node1的请求进一步拆分：
 
-![Consistent Hash Virtual Node Model](C:\Users\glorychou\Desktop\Dubbo Consistent Hash\Consistent Hash Virtual Node Model.jpg)
+![Consistent Hash Virtual Node Model](/_posts/image/consisitenthash/Consistent&#32;Hash&#32;Virtual&#32;Node&#32;Model.jpg)
 
 如上图所示，若有请求落在Node3-Node1'区间，该请求应该是调用Node1'服务，但是因为Node1'是Node1的虚拟节点，所以实际调用的是Node1服务。通过引入虚拟节点，请求的分布就会比较平衡了。
 
